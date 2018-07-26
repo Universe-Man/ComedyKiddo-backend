@@ -2,7 +2,7 @@ class Api::V1::TeamsController < ApplicationController
 
   def index
     @teams = Team.all
-    render json: @teams
+    render json: @teams.uniq
   end
 
   def create
@@ -29,7 +29,7 @@ class Api::V1::TeamsController < ApplicationController
   private
 
   def get_params
-    params.require(:team).permit(:name)
+    params.require(:team).permit(:name, :source)
   end
-  
+
 end

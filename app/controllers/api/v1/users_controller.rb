@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users
+    render json: @users.uniq
   end
 
   def create
@@ -29,7 +29,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def get_params
-    params.require(:user).permit(:name, :email, :password, :coach, :img_src)
+    params.require(:user).permit(:name, :email, :password, :coach, :img_src, :source)
   end
 
 end

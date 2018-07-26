@@ -2,7 +2,7 @@ class Api::V1::NotesController < ApplicationController
 
   def index
     @notes = Note.all
-    render json: @notes
+    render json: @notes.uniq
   end
 
   def create

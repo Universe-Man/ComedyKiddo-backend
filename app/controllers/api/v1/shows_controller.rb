@@ -2,7 +2,7 @@ class Api::V1::ShowsController < ApplicationController
 
   def index
     @shows = Show.all
-    render json: @shows
+    render json: @shows.uniq
   end
 
   def create
@@ -29,7 +29,7 @@ class Api::V1::ShowsController < ApplicationController
   private
 
   def get_params
-    params.require(:show).permit(:name, :location)
+    params.require(:show).permit(:name, :location, :source)
   end
 
 end

@@ -1,7 +1,7 @@
 class Api::V1::PracticesController < ApplicationController
   def index
     @practices = Practice.all
-    render json: @practices
+    render json: @practices.uniq
   end
 
   def create
