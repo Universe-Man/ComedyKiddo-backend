@@ -8,12 +8,14 @@ class Api::V1::ShowsController < ApplicationController
   def create
     @show = Show.new(get_params)
     @show.save
+    render json: @show
   end
 
   def update
     @show = Show.find(parama[:id])
     @show.update(get_params)
     @show.save
+    render json: @show
   end
 
   def delete

@@ -8,12 +8,14 @@ class Api::V1::TeamsController < ApplicationController
   def create
     @team = Team.new(get_params)
     @team.save
+    render json: @team
   end
 
   def update
     @team = Team.find(params[:id])
     @team.update(get_params)
     @team.save
+    render json: @team
   end
 
   def delete
