@@ -18,7 +18,7 @@ class Api::V1::TeamsController < ApplicationController
     render json: @team
   end
 
-  def delete
+  def destroy
     @team = Team.find(params[:id])
     @team.destroy
   end

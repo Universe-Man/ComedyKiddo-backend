@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :users, only:[:index, :create, :update, :delete, :show]
-      resources :teams, only:[:index, :create, :update, :delete, :show]
-      resources :shows, only:[:index, :create, :update, :delete, :show]
-      resources :notes, only:[:index, :create, :update, :delete, :show]
+      resources :users, only:[:index, :create, :update, :destroy, :show]
+      resources :teams, only:[:index, :create, :update, :destroy, :show]
+      resources :shows, only:[:index, :create, :update, :destroy, :show]
+      resources :notes, only:[:index, :create, :update, :destroy, :show]
       # CURRENTLY COMMENTING OUT PRACTICES ROUTES
       # resources :practices, only:[:index, :create, :update, :delete, :show]
       # namespace :api do

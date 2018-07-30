@@ -18,7 +18,7 @@ class Api::V1::ShowsController < ApplicationController
     render json: @show
   end
 
-  def delete
+  def destroy
     @show = Show.find(params[:id])
     @show.destroy
   end
