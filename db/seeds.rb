@@ -78,6 +78,8 @@ UserShow.create(user_id: matt.id, show_id: show5.id)
 UserShow.create(user_id: sydney.id, show_id: show5.id)
 UserShow.create(user_id: ed.id, show_id: show6.id)
 UserShow.create(user_id: ian.id, show_id: show6.id)
+UserShow.create(user_id: ian.id, show_id: show7.id)
+UserShow.create(user_id: mike.id, show_id: show7.id)
 
 # NOTES
 Note.create(content: "I'm the best!", user_id: ian.id)
