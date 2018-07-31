@@ -3,4 +3,9 @@ class Show < ApplicationRecord
   has_many :users, through: :user_shows
   # UNSURE ABOUT BELOW
   has_many :teams, through: :users
+
+  def teams_uniq
+    self.teams.uniq
+  end
+
 end
