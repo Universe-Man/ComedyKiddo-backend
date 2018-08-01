@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # USERS
-ian = User.create(name: "Ian", email: "ian@abc.com", password: "123", coach: false, img_src: "", source: "user")
+ian = User.create(name: "Ian Pollack", email: "ian@abc.com", password: "123", coach: false, img_src: "", source: "user")
 ryan = User.create(name: "Ryan", email: "ryan@abc.com" , password: "123" , coach: false , img_src: "", source: "user")
 ed = User.create(name: "Ed", email: "ed@abc.com", password: "123", coach: false, img_src: "", source: "user")
 eelan = User.create(name: "Eelan", email: "eelan@abc.com", password: "123", coach: true, img_src: "", source: "user")
@@ -19,21 +19,21 @@ sydney = User.create(name: "Sydney", email: "sydney@abc.com", password: "123", c
 matt = User.create(name: "Matt", email: "matt@abc.com", password: "123", coach: false, img_src: "", source: "user")
 
 # TEAMS
-team1 = Team.create(name: "Team One", source: "team")
-team2 = Team.create(name: "Team Two", source: "team")
-team3 = Team.create(name: "Team Three", source: "team")
-team4 = Team.create(name: "Team Four", source: "team")
-team5 = Team.create(name: "Team Five", source: "team")
-team6 = Team.create(name: "Team Six", source: "team")
+team1 = Team.create(name: "Bodega Daddy", source: "team")
+team2 = Team.create(name: "Mother", source: "team")
+team3 = Team.create(name: "The Law Firm", source: "team")
+team4 = Team.create(name: "White Women", source: "team")
+team5 = Team.create(name: "Absolute!", source: "team")
+team6 = Team.create(name: "Gym Crush", source: "team")
 
 # SHOWS
-show1 = Show.create(name: "Show One", location: "Magnet", source: "show")
-show2 = Show.create(name: "Show Two", location: "The Pit", source: "show")
-show3 = Show.create(name: "Show Three", location: "UCB", source: "show")
-show4 = Show.create(name: "Show Four", location: "UCB", source: "show")
-show5 = Show.create(name: "Show Five", location: "Magnet", source: "show")
-show6 = Show.create(name: "Show Six", location: "The Pit", source: "show")
-show7 = Show.create(name: "Show Seven", location: "Magnet", source: "show")
+show1 = Show.create(name: "The Big Dumb Thing", location: "Magnet", source: "show")
+show2 = Show.create(name: "Everyone is Laughing", location: "The Pit", source: "show")
+show3 = Show.create(name: "Tee-Hee", location: "UCB", source: "show")
+show4 = Show.create(name: "Bodega Daddy Goes Shoplifting", location: "UCB", source: "show")
+show5 = Show.create(name: "The Best Show Ever!", location: "Magnet", source: "show")
+show6 = Show.create(name: "$10,000", location: "The Pit", source: "show")
+show7 = Show.create(name: "Colt .45", location: "Magnet", source: "show")
 
 # USERTEAMS
 UserTeam.create(user_id: ian.id, team_id: team1.id)

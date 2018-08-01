@@ -8,9 +8,13 @@ class User < ApplicationRecord
   # def teams_uniq
   #   self.teams.uniq
   # end
-  # 
+  #
   # def shows_uniq
   #   self.shows.uniq
   # end
+
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true
+  validates :coach, presence: true
 
 end

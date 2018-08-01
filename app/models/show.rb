@@ -8,4 +8,7 @@ class Show < ApplicationRecord
     self.teams.uniq
   end
 
+  validates :name, presence: true, uniqueness: true
+  validates :location, presence: true
+
 end
