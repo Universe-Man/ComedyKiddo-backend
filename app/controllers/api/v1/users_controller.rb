@@ -13,8 +13,10 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
+    # byebug
     @user = User.find(params[:id])
     @user.update(get_params)
+    # @user.update!(get_params)
     @user.save
     @users = User.all
     render json: {allUsers: @users, newUser: @user}
