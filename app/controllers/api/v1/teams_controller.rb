@@ -6,7 +6,12 @@ class Api::V1::TeamsController < ApplicationController
   end
 
   def create
+    # create a team
+    # find user by id @user = User.find_by(id: params['userIds'][0])
+    # create the association
+    # @team.users << @user
     @team = Team.new(get_params)
+
     @team.save
     render json: @team
   end
@@ -15,7 +20,8 @@ class Api::V1::TeamsController < ApplicationController
     @team = Team.find(params[:id])
     @team.update(get_params)
     @team.save
-    render json: @team
+    @teams = Team.all
+    render json: {allTeams: @teams, newTeam: @team}
   end
 
   def destroy

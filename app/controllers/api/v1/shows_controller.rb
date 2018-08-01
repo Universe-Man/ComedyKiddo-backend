@@ -12,10 +12,11 @@ class Api::V1::ShowsController < ApplicationController
   end
 
   def update
-    @show = Show.find(parama[:id])
+    @show = Show.find(params[:id])
     @show.update(get_params)
     @show.save
-    render json: @show
+    @shows = Show.all
+    render json: {allShows: @shows, newShow: @show}
   end
 
   def destroy

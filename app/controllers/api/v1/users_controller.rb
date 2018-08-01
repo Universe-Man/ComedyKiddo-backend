@@ -8,14 +8,16 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new(get_params)
     @user.save
-    render json: @user
+    @users = User.all
+    render json: {allUsers: @users, newUser: @user}
   end
 
   def update
     @user = User.find(params[:id])
     @user.update(get_params)
     @user.save
-    render json: @user
+    @users = User.all
+    render json: {allUsers: @users, newUser: @user}
   end
 
   def destroy
