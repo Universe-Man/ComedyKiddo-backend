@@ -13,8 +13,8 @@ class User < ApplicationRecord
   #   self.shows.uniq
   # end
 
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
-  validates :coach, presence: true
+  # validates :name, presence: true
+  # validates :email, presence: true, uniqueness: true
+  # validates :coach, presence: true
 
 end

@@ -2,7 +2,7 @@ class Api::V1::ShowsController < ApplicationController
 
   def index
     @shows = Show.all
-    render json: @shows.uniq
+    render json: @shows
   end
 
   def create

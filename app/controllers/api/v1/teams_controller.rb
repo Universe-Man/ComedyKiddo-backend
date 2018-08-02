@@ -2,7 +2,7 @@ class Api::V1::TeamsController < ApplicationController
 
   def index
     @teams = Team.all
-    render json: @teams.uniq
+    render json: @teams
   end
 
   def create
