@@ -13,7 +13,7 @@ class Api::V1::TeamsController < ApplicationController
     @team = Team.new(get_params)
 
     @team.save
-    render json: @team
+    render json: @team #{allTeams: @teams, newTeam: @team}
   end
 
   def update
